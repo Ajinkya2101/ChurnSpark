@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Assistant - ChurnSpark</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0e1117;
+            color: #fff;
+        }
+
+        nav {
+            background-color: #262730;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.5s ease;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #007bff;
+        }
+
+        .container {
+            background-color: #333;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            width: 80%;
+            color: #ccc;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .answer {
+            margin-top: 5px;
+            color: #ccc;
+        }
+
+        .custom-container {
+            margin-top: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .response-area {
+            margin-top: 20px;
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a class="logo" href="/">ChurnSpark</a>
+        <ul>
+            <li><a class="nav-item nav-link" href="/">Home</a></li>
+            <li><a class="nav-item nav-link" href="/analysis">Analysis</a></li>
+            <li><a class="nav-item nav-link active" href="/chat">Chat</a></li>
+            <li><a class="nav-item nav-link" href="/faq">FAQs</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>AI Assistant</h1>
+        <div class="custom-container">
+            <form method="POST">
+                <input type="text" class="form-control" name="user_input" placeholder="Write your query..." required>
+                <button type="submit" class="btn">Send</button>
+            </form>
+            <!-- Response Area -->
+            <div class="response-area" id="responseArea">
+                <!-- Placeholder for model's response -->
+                {% if gemini_response %}
+                <p id="gemini_response">{{ gemini_response }}</p>
+                {% else %}
+                <p id="gemini_response">Your AI response will appear here...</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

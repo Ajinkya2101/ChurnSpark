@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Churn Predictor</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0e1117;
+            color: #fff;
+        }
+
+        /* Navbar styles with hover effect */
+        nav {
+            background-color: #262730;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.5s ease;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #007bff;
+        }
+
+        .container {
+            background-color: #333;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            width: 80%;
+            color: #ccc;
+        }
+
+        .heading {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .info-cards-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .info-card {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .info-card button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .info-card button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a class="navbar-brand" href="/">ChurnSpark</a>
+        <ul>
+            <li><a class="nav-item nav-link" href="/">Home</a></li>
+            <li><a class="nav-item nav-link" href="/analysis">Analysis</a></li>
+            <li><a class="nav-item nav-link" href="/vis">Visualizations</a></li>
+            <li><a class="nav-item nav-link" href="/chat">Chat</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 class="heading">Welcome to Churn Predictor</h1>
+        <div class="info-cards-container">
+            <div class="info-card">
+                <h2>Analysis</h2>
+                <p>Deep dive into customer data and churn analysis.</p>
+                <button onclick="window.location.href='/analysis';">Go to Analysis</button>
+            </div>
+            <div class="info-card">
+                <h2>Visualizations</h2>
+                <p>Visualize data with interactive charts and plots.</p>
+                <button onclick="window.location.href='/vis';">View</button>
+            </div>
+            <div class="info-card">
+                <h2>Chat</h2>
+                <p>Have a conversation with our advanced AI assistant.</p>
+                <button onclick="window.location.href='/chat';">Start Chat</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

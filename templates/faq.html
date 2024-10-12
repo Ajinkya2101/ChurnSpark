@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FAQ - ChurnSpark</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0e1117;
+            color: #fff;
+        }
+
+        nav {
+            background-color: #262730;
+            padding: 8px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.5s ease;
+        }
+
+        .logo {
+            font-size: 24px;
+        }
+
+        .menu-btn {
+            display: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #007bff;
+        }
+
+        .container {
+            background-color: #333;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            width: 80%;
+            color: #ccc;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .answer {
+            margin-top: 5px;
+            color: #ccc;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a class="navbar-brand" href="/">ChurnSpark</a>
+        <ul>
+            <li><a class="nav-item nav-link" href="/">Home</a></li>
+            <li><a class="nav-item nav-link" href="/faq">FAQs</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <div class="question">What is ChurnSpark?</div>
+            <div class="answer">ChurnSpark is a tool that helps businesses understand which of their customers are most likely to stop using their services or products soon.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">How does the ChurnSpark work?</div>
+            <div class="answer">Our ChurnSpark uses data and past customer behavior to identify patterns and predict which customers might leave, helping you take action to keep them.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">What data is analyzed in the churn prediction process?</div>
+            <div class="answer">The data analyzed includes customer demographics, contract details, payment methods, services used (e.g., online security, tech support), monthly charges, and tenure. These features help identify key patterns and trends contributing to customer churn.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">What key insights were found from the exploratory data analysis (EDA)?</div>
+            <div class="answer">From the EDA, the following insights were uncovered:
+                <ul>
+                    <li>Customers using electronic check as their payment method tend to churn more often.</li>
+                    <li>Monthly contract customers are more likely to churn compared to those on longer-term contracts.</li>
+                    <li>Customers lacking online security and technical support are at a higher risk of churning.</li>
+                    <li>Non-senior citizens show a higher likelihood of churning compared to senior citizens.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="question">How do you handle missing or incorrect data?</div>
+            <div class="answer">During the data cleaning process, rows with missing values, particularly in the "TotalCharges" column, were either removed or corrected by transforming the data. This ensures accuracy in the analysis and predictions.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">Why is predicting churn important?</div>
+            <div class="answer">Predicting churn is important because it allows businesses to take proactive steps to retain customers, improve satisfaction, and ultimately save on the costs associated with acquiring new customers.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">What tools and libraries are used in the ChurnSpark's EDA process?</div>
+            <div class="answer">
+                The EDA process uses several tools and libraries in Python:
+                <ul>
+                    <li><strong>pandas:</strong> for data manipulation and analysis</li>
+                    <li><strong>numpy:</strong> for numerical computations</li>
+                    <li><strong>matplotlib and seaborn:</strong> for data visualization</li>
+                    <li><strong>scikit-learn:</strong> for preprocessing and feature scaling</li>
+                </ul>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="question">What are the most important features affecting churn?</div>
+            <div class="answer">
+                Key features influencing churn include:
+                <ul>
+                    <li>Contract type (monthly vs. long-term)</li>
+                    <li>Payment method (e.g., electronic check)</li>
+                    <li>Online security and tech support services</li>
+                    <li>Monthly charges and tenure</li>
+                </ul>
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="question">How accurate is the ChurnSpark?</div>
+            <div class="answer">Our ChurnSpark is highly accurate, with a precision rate of 94%, thanks to the use of advanced algorithms such as DecisionTreeClassifier, SMOTEENN for imbalanced data handling, RandomForestClassifier, and Principal Component Analysis (PCA) for feature reduction.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">How can I improve the accuracy of churn predictions?</div>
+            <div class="answer">Improving the quality and quantity of the data you provide can help increase the accuracy of predictions. Regularly updating the data and including as much relevant customer information as possible is key.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">Can I customize the ChurnSpark to fit my business needs?</div>
+            <div class="answer">Yes, our ChurnSpark can be customized to better understand the specific needs and patterns of your business and customers.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">How do I get started with using the ChurnSpark?</div>
+            <div class="answer">Getting started is easy! Simply upload your customer data, and our tool will start analyzing the data to provide churn predictions.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">What should I do if I have more questions?</div>
+            <div class="answer">If you have more questions, feel free to contact us through our website by using the feedback form. We're here to help you make the most out of our ChurnSpark.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">Is my data safe with the ChurnSpark?</div>
+            <div class="answer">Absolutely. Your data is securely handled, ensuring privacy and compliance with data protection standards.</div>
+        </div>
+    </div>
+</body>
+</html>
